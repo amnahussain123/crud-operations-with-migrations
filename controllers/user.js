@@ -10,6 +10,7 @@ module.exports = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 8)
         }).then((user) => {
+            console.log(user);
             return res.status(201).json({
                 "message": "User created successfully",
                 user
